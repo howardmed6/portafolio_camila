@@ -1,4 +1,3 @@
-// Pon aquí las habilidades blandas reales de Camila.
-const softSkills = ['[Habilidad 1]', '[Habilidad 2]', '[Habilidad 3]', '[Habilidad 4]']
+const softSkills = ['Empatía', 'Trabajo en equipo', 'Responsabilidad', 'Adaptabilidad']
 
 export default softSkills

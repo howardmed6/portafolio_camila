@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import ImageModal from './ImageModal'
 
 function Accordion({ items }) {
   const [openIndex, setOpenIndex] = useState(0)
+  const [selectedImage, setSelectedImage] = useState(null)
 
   const toggle = (index) => {
     setOpenIndex((prev) => (prev === index ? -1 : index))
@@ -36,12 +38,23 @@ function Accordion({ items }) {
                 <div className="accordion-gallery">
                   {item.images.map((image, imgIndex) =>
                     image.url ? (
-                      <img
+                      <button
                         key={imgIndex}
-                        src={image.url}
-                        alt={`${item.title} ${imgIndex + 1}`}
-                        className="gallery-image"
-                      />
+                        type="button"
+                        className="gallery-image-button"
+                        onClick={() =>
+                          setSelectedImage({
+                            url: image.url,
+                            alt: `${item.title} ${imgIndex + 1}`,
+                          })
+                        }
+                      >
+                        <img
+                          src={image.url}
+                          alt={`${item.title} ${imgIndex + 1}`}
+                          className="gallery-image"
+                        />
+                      </button>
                     ) : (
                       <div key={imgIndex} className="gallery-placeholder">
                         Imagen {imgIndex + 1}
@@ -54,6 +67,11 @@ function Accordion({ items }) {
           </div>
         )
       })}
+
+      <ImageModal
+        image={selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </div>
   )
 }

@@ -122,3 +122,44 @@ main {
     font-size: 1.7rem;
   }
 }
+
+/* Modal de imagen ampliada */
+.image-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 100;
+}
+
+.image-modal-content {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 30px var(--accent);
+}
+
+.image-modal-close {
+  position: fixed;
+  top: 1rem;
+  right: 1.2rem;
+  background: var(--bg-purple-dark);
+  border: 1px solid var(--accent);
+  color: var(--text-white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 101;
+}
+
+@media (max-width: 640px) {
+  .image-modal-overlay {
+    padding: 1rem;
+  }
+}

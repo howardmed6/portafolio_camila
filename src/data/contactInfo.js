@@ -22,7 +22,7 @@ const contactInfo = [
     label: 'Email',
     value: 'camila11223488@gmail.com',
     icon: '✉️',
-    href: 'mailto:camila11223488@gmail.com',
+    href: 'https://mail.google.com/mail/?view=cm&fs=1&to=camila11223488@gmail.com',
   },
 ]
 
