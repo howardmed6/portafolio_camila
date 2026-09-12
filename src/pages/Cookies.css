@@ -1,0 +1,24 @@
+.page-cookies {
+  padding: 3rem 2rem 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-content p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.info-content p:last-child {
+  margin-bottom: 0;
+}
+
+.info-content strong {
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .page-cookies {
+    padding: 2rem 1rem 3rem;
+  }
+}

@@ -1,0 +1,46 @@
+.page-politicas {
+  padding: 3rem 2rem 4rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.policy-section {
+  margin-bottom: 1.8rem;
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+}
+
+.policy-section h3 {
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+}
+
+.policy-section p {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+
+.policy-section ul {
+  margin: 0 0 0.6rem;
+  padding-left: 1.3rem;
+  line-height: 1.6;
+}
+
+.policy-section li {
+  margin-bottom: 0.3rem;
+}
+
+.policy-updated {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .page-politicas {
+    padding: 2rem 1rem 3rem;
+  }
+}
